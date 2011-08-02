@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cas:producttypes xmlns:cas="http://oodt.jpl.nasa.gov/1.0/cas">
+  <type id="urn:oodt:ImageFile" name="ImageFile">
+    <repository path="file://[CAS_FILEMGR_ARCHIVE]/"/>
+    <versioner class="edu.usc.csci572.jtran.ImageProductVersioner"/>
+    <description>The default product type for any kind of file.</description>
+    <metExtractors>
+      <extractor
+        class="org.apache.oodt.cas.filemgr.metadata.extractors.CoreMetExtractor">
+        <configuration>
+          <property name="nsAware" value="true" />
+          <property name="elementNs" value="CAS" />
+          <property name="elements"
+            value="ProductReceivedTime,ProductName,ProductId" />
+        </configuration>
+      </extractor>
+      <extractor class="org.apache.oodt.cas.filemgr.metadata.extractors.examples.MimeTypeExtractor" />
+      <extractor class="edu.usc.csci572.jtran.ImageExtractor" />
+    </metExtractors>
+  </type>
+
+  </cas:producttypes>

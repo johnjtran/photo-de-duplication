@@ -1,0 +1,15 @@
+#!/bin/sh
+
+PATH=${JAVA_HOME}/bin:$PATH
+export PATH
+
+## example:
+## ./crawler_launcher -cid StdProductCrawler \
+##    -pp /path/to/products \
+##    -fm http://localhost:9000 \
+##    -ct org.apache.oodt.cas.filemgr.datatransfer.LocalDataTransferFactory \
+##    -mfx met 
+
+java -Djava.util.logging.config.file=../etc/logging.properties \
+	-Djava.ext.dirs=../lib \
+	org.apache.oodt.cas.crawl.CrawlerLauncher $*
