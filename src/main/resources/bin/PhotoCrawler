@@ -8,6 +8,6 @@ fi
 
 export JAVA_HOME
 
-APPLICATION=com.pcwerk.dedup.PhotoCrawler
+APPLICATION=edu.usc.csci572.jtran.PhotoCrawler
 
 $JAVA_HOME/bin/java -Djava.ext.dirs=../lib $APPLICATION $*

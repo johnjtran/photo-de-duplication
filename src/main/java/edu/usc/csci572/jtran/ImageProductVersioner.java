@@ -1,6 +1,6 @@
 // $Id: ImageProductVersioner.java 1985 2011-07-25 22:55:41Z jtran $
 
-package com.pcwerk.dedup;
+package edu.usc.csci572.jtran;
 
 import java.io.File;
 import java.io.IOException;

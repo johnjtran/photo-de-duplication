@@ -1,5 +1,5 @@
 
-package com.pcwerk.dedup;
+package edu.usc.csci572.jtran;
 
 import java.net.MalformedURLException;
 import java.net.URL;
