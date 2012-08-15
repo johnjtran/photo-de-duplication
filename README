@@ -1,3 +1,40 @@
 $Id$
 
-This is an OpenSource photo/image de-duplication tool.
+BLUF (Bottom Line Up Front): This is an OpenSource photo/image de-duplication tool that utilizes OODT as the data catalog and archive manager.
+
+Background
+
+So I took a search engine (information retrieval) class with Chris Mattmann and my final project focused on large scale data (in this case image) deduplication.  I realize that there are a number of image deduplicattor applications out there.  However, to my knowledge none of them utilizes OODT.  This application is designed to, in the spirit of OODT, support *extremely* large-scale image database.  While the current release is not intended for consumer-level consumption, with some patience power users can leverage OODT to archive their burgeoning image collection.
+
+Example Use Case
+
+So you use iPhotos, dabbled with Adobe's Elements, gave Aperture a try, mucked with Picasa, etc. Uh oh!  Before you know it, your photo collection which is spreaded across several macs, PCs, linux boxes grew.  They are scattered across different folders and maybe have been renamed at one point or another.  Manually sorting through the 10,000 or so pictures is not an option.  Aggresively deleting duplicates is possible but undesirable given the possibility of deleting the only picture of your kid's first step.  You get the picture...
+
+Here is where the image de-duplicator can help.  
+
+1. Install the "server" on a linux box with plenty of disk space
+
+2. On your PCs, Macs, Linux clients run the crawler/ingest tool and let the archiver catalog your images
+
+If you use Picasa just set it to "watch" only the data/archive directory.  If you use iPhoto (remove all your photos) and add (single drag and drop) your data/archive into iPhoto -- consider the process a onetime iPhoto diet process.
+
+Usage
+
+* Server (catalog/archive) -- make sure that JAVA_HOME is set
+
+tar xvfz photo-deduplication-0.0.1-dist.tar.gz
+cd photo-deduplication/sbin
+./filemgr.sh start
+
+* Client (crawler) -- make sure that JAVA_HOME is set
+
+tar xvfz photo-deduplication-0.0.1-dist.tar.gz
+cd photo-deduplication/bin
+./PhotoCrawler http://server:9000 /path/to/your/photo/directories
+
+(rinse lather and repeat for as many directory as needed)
+
+Note that the crawler does recursive crawling, so there is no need to visit individual sub-directories.
+
+
+--John
