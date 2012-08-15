@@ -16,7 +16,7 @@ Here is where the Photo De-Duplication can help.
 
 2. On your PCs, Macs, Linux clients run the crawler/ingest tool and let the archiver catalog your images
 
-If you use Picasa just set it to "watch" only the data/archive directory.  If you use iPhoto (remove all your photos) and add (single drag and drop) your data/archive into iPhoto -- consider the process a onetime iPhoto diet process.
+If you use Picasa just set it to "watch" the data/archive directory.  If you use iPhoto, first remove all your photos from iPhotos then add, via a simple drag and drop, your data/archive into iPhoto -- consider the process a onetime iPhoto diet process.
 
 Usage
 
@@ -32,7 +32,7 @@ tar xvfz photo-deduplication-0.0.1-dist.tar.gz
 cd photo-deduplication/bin
 ./PhotoCrawler http://server:9000 /path/to/your/photo/directories
 
-(rinse lather and repeat for as many directories as needed)
+(rinse, lather and repeat for as many directories as needed)
 
 Note that the crawler does recursive crawling, so there is no need to visit individual sub-directories.
 
