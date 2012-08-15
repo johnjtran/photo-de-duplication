@@ -3,7 +3,7 @@
 <cas:producttypes xmlns:cas="http://oodt.jpl.nasa.gov/1.0/cas">
   <type id="urn:oodt:ImageFile" name="ImageFile">
     <repository path="file://[CAS_FILEMGR_ARCHIVE]/"/>
-    <versioner class="edu.usc.csci572.jtran.ImageProductVersioner"/>
+    <versioner class="com.pcwerk.dedup.ImageProductVersioner"/>
     <description>The default product type for any kind of file.</description>
     <metExtractors>
       <extractor
@@ -16,7 +16,7 @@
         </configuration>
       </extractor>
       <extractor class="org.apache.oodt.cas.filemgr.metadata.extractors.examples.MimeTypeExtractor" />
-      <extractor class="edu.usc.csci572.jtran.ImageExtractor" />
+      <extractor class="com.pcwerk.dedup.ImageExtractor" />
     </metExtractors>
   </type>
 
